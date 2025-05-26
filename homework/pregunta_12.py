@@ -26,7 +26,6 @@ def pregunta_12():
 
     df = pd.read_csv("files/input/tbl2.tsv", sep="\t")
     df["c5b"]  = df["c5b"].astype(str)
-    
     df["c5"] = df["c5a"] + ":" + df["c5b"]
     df = df.groupby("c0")["c5"].apply(lambda x: ",".join(sorted(set(x)))).reset_index()
     return df[["c0", "c5"]]

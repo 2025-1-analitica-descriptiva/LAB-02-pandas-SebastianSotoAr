@@ -18,10 +18,11 @@ def pregunta_06():
     """
 
     df = pd.read_csv("files/input/tbl1.tsv", sep="\t")
-    respuesta = df['c4'].unique().tolist()
-    lista=[]
-    for i in range(len(respuesta)):
-        respuesta[i] = respuesta[i].upper()
-        lista.append(respuesta[i])
-    lista.sort()
-    return lista
+    ans = df['c4'].unique().tolist()
+    list =[]
+    for i in range(len(ans)):
+        ans[i] = ans[i].upper()
+        list.append(ans[i])
+        
+    list.sort()
+    return list
